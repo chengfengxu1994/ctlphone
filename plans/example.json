@@ -1,0 +1,7 @@
+{
+  "actions": [
+    {"type": "tap_text", "text": "立即购买", "retry": 20, "interval": 0.15},
+    {"type": "sleep", "seconds": 0.3},
+    {"type": "tap_text", "text": "提交订单", "retry": 20, "interval": 0.15}
+  ]
+}

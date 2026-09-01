@@ -1,0 +1,17 @@
+[Unit]
+Description=ctlphone exclusive Android device gateway
+After=default.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/git-projects/ctlphone
+ExecStart=%h/git-projects/ctlphone/.venv/bin/python -m phone_ctl.gateway
+EnvironmentFile=-%h/.config/ctlphone/gateway.env
+Restart=on-failure
+RestartSec=2
+NoNewPrivileges=true
+PrivateTmp=true
+Environment=PHONE_CLAIM_DIR=/run/lock/phone-device
+
+[Install]
+WantedBy=default.target

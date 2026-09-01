@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "name": "legend-style-patrol-and-skills",
+  "coordinate_space": {"width": 2712, "height": 1220},
+  "max_seconds": 600,
+  "actions": [
+    {
+      "type": "parallel",
+      "tracks": [
+        [
+          {
+            "type": "repeat",
+            "duration_seconds": 590,
+            "interval_seconds": 0.1,
+            "actions": [
+              {
+                "type": "random_choice",
+                "choices": [
+                  [{"type": "drag_hold", "x1": 350, "y1": 930, "x2": 610, "y2": 930, "ms": 1400}],
+                  [{"type": "drag_hold", "x1": 350, "y1": 930, "x2": 100, "y2": 930, "ms": 900}],
+                  [{"type": "drag_hold", "x1": 350, "y1": 930, "x2": 350, "y2": 680, "ms": 700}],
+                  [{"type": "drag_hold", "x1": 350, "y1": 930, "x2": 350, "y2": 1130, "ms": 700}]
+                ]
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "type": "repeat",
+            "duration_seconds": 590,
+            "interval_seconds": 0.28,
+            "actions": [
+              {"type": "tap", "x": 2370, "y": 910, "jitter_px": 8},
+              {
+                "type": "random_choice",
+                "choices": [
+                  [{"type": "tap", "x": 2530, "y": 690}],
+                  [{"type": "tap", "x": 2320, "y": 620}],
+                  [{"type": "tap", "x": 2110, "y": 690}],
+                  [{"type": "sleep", "seconds": 0.4}]
+                ]
+              }
+            ]
+          }
+        ]
+      ]
+    }
+  ]
+}

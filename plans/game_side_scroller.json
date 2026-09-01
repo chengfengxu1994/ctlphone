@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "name": "side-scroller-combat-smoke",
+  "package": "com.indie.darkdungeonrogue",
+  "coordinate_space": {"width": 2712, "height": 1220},
+  "max_seconds": 180,
+  "actions": [
+    {"type": "assert_foreground", "package": "com.indie.darkdungeonrogue"},
+    {
+      "type": "parallel",
+      "tracks": [
+        [
+          {
+            "type": "repeat",
+            "duration_seconds": 170,
+            "interval_seconds": 0.08,
+            "actions": [
+              {
+                "type": "random_choice",
+                "choices": [
+                  [{"type": "drag_hold", "x1": 360, "y1": 930, "x2": 590, "y2": 930, "ms": 1100}],
+                  [{"type": "drag_hold", "x1": 360, "y1": 930, "x2": 150, "y2": 930, "ms": 650}],
+                  [{"type": "drag_hold", "x1": 360, "y1": 930, "x2": 520, "y2": 790, "ms": 550}]
+                ]
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "type": "repeat",
+            "duration_seconds": 170,
+            "interval_seconds": 0.16,
+            "actions": [
+              {"type": "hold", "x": 2350, "y": 930, "ms": 900},
+              {"type": "tap", "x": 2110, "y": 760, "jitter_px": 5},
+              {
+                "type": "random_choice",
+                "choices": [
+                  [{"type": "tap", "x": 2500, "y": 650}],
+                  [{"type": "tap", "x": 2310, "y": 570}],
+                  [{"type": "tap", "x": 2110, "y": 610}],
+                  [{"type": "sleep", "seconds": 0.25}]
+                ]
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "type": "repeat",
+            "duration_seconds": 170,
+            "interval_seconds": 4.0,
+            "actions": [
+              {"type": "assert_foreground", "package": "com.indie.darkdungeonrogue"}
+            ]
+          }
+        ]
+      ]
+    }
+  ]
+}

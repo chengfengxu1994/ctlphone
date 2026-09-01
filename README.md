@@ -2,6 +2,8 @@
 
 ctlphone is a Linux-side Android automation toolkit built on ADB. It provides a single-owner Unix-socket gateway, CLI commands, MCP tools, UI inspection, bounded/redacted app-log capture, optional pattern unlock with hidden input, and declarative test macros.
 
+AI coding agents should read [`AGENTS.md`](AGENTS.md) first. Module boundaries, tests, and FoundF integration are described in [`docs/DEVELOPMENT.md`](docs/DEVELOPMENT.md).
+
 ## Public snapshot boundary
 
 This repository intentionally excludes every real-broker login/action component, including the broker service, broker clients, order approval, secure credential injection, and all China Merchants Securities or Eastmoney login/action code. The generic gateway still supports an inter-process device-claim boundary, but contains no broker UI logic. The snapshot also contains no device serial, password, account identifier, credential, screenshot, UI dump, or local runtime state.
